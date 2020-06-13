@@ -12,7 +12,7 @@
 		"prebuild": "npm run clean",
 		"prewatch": "npm run clean",
 		"watch:popup": "npm run watch:build --prefix src/popup",
-		"build:popup": "npm run build --prefix src/popup && cd src/popup/build && cpy * /static/* ../../../dist/popup --parents",
+		"build:popup": "INLINE_RUNTIME_CHUNK=false npm run build --prefix src/popup && cd src/popup/build && cpy * /static/* ../../../dist/popup --parents",
 		"zip": "bestzip extension.zip dist/*"
 	},
 	"keywords": [],
